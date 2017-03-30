@@ -17,15 +17,15 @@ public class contactEntry {
 //    }
 
     public static void main(String[] args) throws SQLException {
-//        contactEntry contact = new contactEntry("Bob", "Jones", "1015551234");
 
         contactEntry contact = new contactEntry();
         Customer customer = new Customer();
         try {
 
-            customer.setFirstName(null);
-            customer.setLastName("Jobs");
-            customer.setPhoneNumber("9102225555");
+            //plug in front end in the setFirstName
+            customer.setFirstName("Anne");
+            customer.setLastName("Smith");
+            customer.setPhoneNumber("50512345671");
             contact.addContactButton(customer);
 
         } catch (Exception e) {

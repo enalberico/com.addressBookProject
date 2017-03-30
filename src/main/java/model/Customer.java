@@ -25,7 +25,7 @@ public class Customer {
 
 
     public void setFirstName(String firstName) throws Exception {
-        if (!firstName.isEmpty() && firstName != null) {
+        if (firstName != null && !firstName.isEmpty()) {
             this.firstName = firstName;
         }
         else
@@ -34,11 +34,29 @@ public class Customer {
         }
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setLastName(String lastName) throws Exception {
+        if (lastName != null && !lastName.isEmpty()) {
+            this.lastName = lastName;
+        }
+        else
+        {
+            throw new Exception("Last Name value cannot be null/empty");
+        }
     }
 
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public void setPhoneNumber(String phoneNumber) throws Exception{
+        if (phoneNumber != null && !phoneNumber.isEmpty()) {
+            if (phoneNumber.length() == 10) {
+                this.phoneNumber = phoneNumber;
+            }
+            else
+            {
+                throw new Exception("Phone number must contain exactly 10 numbers");
+            }
+        }
+        else
+        {
+            throw new Exception("Phone number cannot be null");
+        }
     }
 }
