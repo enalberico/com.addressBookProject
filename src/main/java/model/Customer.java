@@ -25,18 +25,34 @@ public class Customer {
 
 
     public void setFirstName(String firstName) throws Exception {
-        if (firstName != null && !firstName.isEmpty()) {
-            this.firstName = firstName;
+        if (firstName != null && !firstName.isEmpty())
+        {
+            if (firstName.length() >=2)
+            {
+                this.firstName = firstName;
+            }
+            else
+            {
+                throw new Exception("First name length must be at least 2 characters long");
+            }
         }
         else
         {
-            throw new Exception("First Name value cannot be null/empty");
+            throw new Exception("First name value cannot be null/empty");
         }
     }
 
     public void setLastName(String lastName) throws Exception {
-        if (lastName != null && !lastName.isEmpty()) {
-            this.lastName = lastName;
+        if (lastName != null && !lastName.isEmpty())
+        {
+            if (lastName.length() >= 2)
+            {
+                this.lastName = lastName;
+            }
+            else
+            {
+                throw new Exception("Last name length must be at least 2 characters long");
+            }
         }
         else
         {
