@@ -20,9 +20,9 @@ public class contactEntry {
         Customer customer = new Customer();
         try {
             //plug in front end in the setFirstName
-            customer.setFirstName("Ab");
-            customer.setLastName("Ja");
-            customer.setPhoneNumber("9092224744");
+            customer.setFirstName("Aa");
+            customer.setLastName("Bb");
+            customer.setPhoneNumber("9152224744");
             contact.addContactButton(customer);
 
         } catch (Exception e) {
@@ -38,7 +38,7 @@ public class contactEntry {
 
             String query = "insert into CONTACT (FIRST_NAME, LAST_NAME, PHONE_NUMBER) values (?, ?, ?)";
 
-            Statement createStatement = connection.createStatement();
+            connection.createStatement();
             PreparedStatement preparedStatement = connection.prepareStatement(query);
             preparedStatement.setString(1, customer.getFirsttName());
             preparedStatement.setString(2, customer.getLastName());
