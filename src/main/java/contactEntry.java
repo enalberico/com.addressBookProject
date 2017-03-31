@@ -7,8 +7,6 @@ import java.sql.*;
  */
 public class contactEntry {
 
-
-
 //    public contactEntry(String firstName, String lastName, String phoneNumber)
 //    {
 //        this.setFirstName(firstName);
@@ -21,17 +19,15 @@ public class contactEntry {
         contactEntry contact = new contactEntry();
         Customer customer = new Customer();
         try {
-
             //plug in front end in the setFirstName
-            customer.setFirstName("Anne");
-            customer.setLastName("Smith");
-            customer.setPhoneNumber("50512345671");
+            customer.setFirstName("Ab");
+            customer.setLastName("Ja");
+            customer.setPhoneNumber("9092224744");
             contact.addContactButton(customer);
 
         } catch (Exception e) {
             e.printStackTrace();
         }
-
     }
 
     public void addContactButton(Customer customer) throws SQLException
@@ -51,8 +47,7 @@ public class contactEntry {
             preparedStatement.executeUpdate();
             connection.close();
 
-        }
-        catch (SQLException ex) {
+        } catch (SQLException ex) {
             ex.printStackTrace();
         }
     }

@@ -25,59 +25,40 @@ public class Customer {
 
 
     public void setFirstName(String firstName) throws Exception {
-        if (firstName != null && !firstName.isEmpty())
-        {
-            if (firstName.length() >=2)
-            {
+        if (firstName != null && !firstName.isEmpty()) {
+            if (firstName.length() >=2) {
                 this.firstName = firstName;
-            }
-            else
-            {
+            } else {
                 throw new Exception("First name length must be at least 2 characters long");
             }
-        }
-        else
-        {
+        } else {
             throw new Exception("First name value cannot be null/empty");
         }
     }
 
     public void setLastName(String lastName) throws Exception {
-        if (lastName != null && !lastName.isEmpty())
-        {
-            if (lastName.length() >= 2)
-            {
+        if (lastName != null && !lastName.isEmpty()) {
+            if (lastName.length() >= 2) {
                 this.lastName = lastName;
-            }
-            else
-            {
+            } else {
                 throw new Exception("Last name length must be at least 2 characters long");
             }
-        }
-        else
-        {
+        } else {
             throw new Exception("Last Name value cannot be null/empty");
         }
     }
 
     public void setPhoneNumber(String phoneNumber) throws Exception{
-        if (phoneNumber != null && !phoneNumber.isEmpty())
-        {
+        if (phoneNumber != null && !phoneNumber.isEmpty()) {
             if (!phoneNumber.matches("\\d{10}")) {
-                {
                     phoneNumber = phoneNumber.replaceAll("[^0-9]", "");
-                }
             }
-        }
-        else
-        {
+        } else {
             throw new Exception("Phone number cannot be null");
         }
-        if (phoneNumber.length() == 10)
-        {
+        if (phoneNumber.length() == 10) {
             this.phoneNumber = phoneNumber;
-        }
-        else {
+        } else {
             throw new Exception("Phone number must contain exactly 10 numbers");
         }
     }
