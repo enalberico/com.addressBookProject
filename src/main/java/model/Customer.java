@@ -45,18 +45,24 @@ public class Customer {
     }
 
     public void setPhoneNumber(String phoneNumber) throws Exception{
-        if (phoneNumber != null && !phoneNumber.isEmpty()) {
-            if (phoneNumber.length() == 10) {
-                this.phoneNumber = phoneNumber;
-            }
-            else
-            {
-                throw new Exception("Phone number must contain exactly 10 numbers");
+        if (phoneNumber != null && !phoneNumber.isEmpty())
+        {
+            if (!phoneNumber.matches("\\d{10}")) {
+                {
+                    phoneNumber = phoneNumber.replaceAll("[^0-9]", "");
+                }
             }
         }
         else
         {
             throw new Exception("Phone number cannot be null");
+        }
+        if (phoneNumber.length() == 10)
+        {
+            this.phoneNumber = phoneNumber;
+        }
+        else {
+            throw new Exception("Phone number must contain exactly 10 numbers");
         }
     }
 }
