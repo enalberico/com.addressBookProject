@@ -20,9 +20,9 @@ public class contactEntry {
         Customer customer = new Customer();
         try {
             //plug in front end in the setFirstName
-            customer.setFirstName("Aa");
-            customer.setLastName("Bb");
-            customer.setPhoneNumber("9152224744");
+            customer.setFirstName(" MICHELLE LEE ");
+            customer.setLastName(" Smi!th-Jackson!");
+            customer.setPhoneNumber(" 988522 24-74  ");
             contact.addContactButton(customer);
 
         } catch (Exception e) {
