@@ -40,7 +40,7 @@ public class contactEntry {
 
             connection.createStatement();
             PreparedStatement preparedStatement = connection.prepareStatement(query);
-            preparedStatement.setString(1, customer.getFirsttName());
+            preparedStatement.setString(1, customer.getFirstName());
             preparedStatement.setString(2, customer.getLastName());
             preparedStatement.setString(3, customer.getPhoneNumber());
 

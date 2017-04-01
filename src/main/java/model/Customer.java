@@ -13,7 +13,7 @@ public class Customer {
 
     public Customer(){}
 
-    public String getFirsttName() {
+    public String getFirstName() {
         return this.firstName;
     }
 
