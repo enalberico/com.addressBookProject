@@ -30,8 +30,7 @@ public class Customer {
                 firstName = firstName.replaceAll("[^a-zA-Z '-]", "");
                 String[] firstname = firstName.split("[\\s+'-]");
                 ArrayList<String> name = new ArrayList<String>();
-                for (String firstNameString : firstname)
-                {
+                for (String firstNameString : firstname) {
                     //if firstNameString.length() > 0 will handle StringIndexOutOfBoundsException in case user adds space before name
                     if (firstNameString.length() > 0) {
                         firstNameString = firstNameString.substring(0, 1).toUpperCase() + firstNameString.substring(1).toLowerCase();
@@ -77,7 +76,7 @@ public class Customer {
                 phoneNumber = phoneNumber.replaceAll("[^0-9]", "");
             }
         } else {
-            throw new Exception("Phone number cannot be null");
+            throw new Exception("Phone number cannot be null/empty");
         }
         //TODO update length later to match different country phone number lengths
         if (phoneNumber.length() == 10) {
