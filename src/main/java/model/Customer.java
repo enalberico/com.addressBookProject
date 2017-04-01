@@ -11,8 +11,6 @@ public class Customer {
     private String lastName;
     private String phoneNumber;
 
-    public Customer(){}
-
     public String getFirstName() {
         return this.firstName;
     }
